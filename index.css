@@ -1,0 +1,82 @@
+h1{
+ color: aliceblue;
+ text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+h1:hover{
+  text-shadow: #FC0 1px 0 10px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #19101b;
+}
+
+.star-field {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #19101b; 
+}
+
+.star {
+  position: absolute;
+  width: 2px; 
+  height: 2px; 
+  background-color: #766396; 
+  border-radius: 50%; 
+  animation: twinkling 3s infinite; /* Twinkle-Animation */
+}
+
+/* Keyframes Twinkling */
+@keyframes twinkling {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+
+.heart {
+  position: relative;
+  top:90px;
+  left: 90px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-45deg);
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.heart::after,
+.heart::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 140px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::after {
+  top: -69px;
+  left: 0;
+}
+
+
+.heart::before {
+  top: -10px;
+  left: 50px; 
+  height: 110px;
+}
